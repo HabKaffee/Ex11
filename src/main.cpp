@@ -1,9 +1,8 @@
 // Copyright 2021
 #include <iostream>
 #include <string>
-
-#include "train.h"
 #include <ctime>
+#include "train.h"
 
 int main() {
     srand(time(nullptr));

@@ -1,6 +1,4 @@
 //  Copyright 2021 Nikita Naumov
-
-
 #include <iostream>
 #include "train.h"
 
@@ -43,11 +41,13 @@ void Train::printState() {
     Cage* ptr = first;
     unsigned cnt = 0;
     while (ptr != first->prev) {
-        std::cout << cnt << ":" << ((ptr->getCurStatus()) ? ("on") : ("off")) << std::endl;
+        std::cout << cnt << ":" <<
+            ((ptr->getCurStatus()) ? ("on") : ("off")) << std::endl;
         ++cnt;
         ptr = ptr->next;
     }
-    std::cout << cnt << ":" << (ptr->getCurStatus() ? ("on") : ("off")) << std::endl;
+    std::cout << cnt << ":" <<
+        (ptr->getCurStatus() ? ("on") : ("off")) << std::endl;
 }
 
 unsigned Train::calculateLength() {
