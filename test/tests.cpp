@@ -40,5 +40,5 @@ TEST(Train, test3) {
         trainObj.addCage(cage);
     }
     size_t expected = 2*n;
-    EXPECT_EQ(expected, trainObj.getLength());
+    EXPECT_EQ(expected, trainObj.calculateLength());
 }
