@@ -3,13 +3,13 @@
 #define INCLUDE_TRAIN_H_
 
 class Cage {
-private:
+ private:
     bool light;
-public:
+ public:
     Cage* next;
     Cage* prev;
     Cage(): light(false), next(nullptr), prev(nullptr) {}
-    void on()  { light=true; }
+    void on()  { light = true; }
     void off() { light = false; }
     bool getCurStatus() const  { return light; }
     void setLight();
@@ -17,10 +17,10 @@ public:
 };
 
 class Train {
-private:
+ private:
     Cage* first = nullptr;
     Cage* last = nullptr;
-public:
+ public:
     Train();
     void addCage(Cage* cageToAdd);
     void printState();
